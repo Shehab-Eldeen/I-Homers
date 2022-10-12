@@ -1,0 +1,31 @@
+.auth{
+  min-height: 100vh;
+  line-height: 1.2rem;
+  .auth-img{
+    background-color: var(--bg-login);
+    height: 100vh;
+  }
+  small{
+    color: var(--primary);
+    cursor: pointer;
+  }
+  .label{
+    font-size: 0.857rem;
+    color: var(--font-login);
+  }
+  .form-check-label{
+    font-size: 0.857rem;
+    color: var(--font-login);
+    margin-top: .1rem;
+  }
+  .form-check-input:checked{
+    background-color: var(--primary-1);
+    border: 1px solid var(--primary-1);
+  }
+}
+body[dir='rtl']{
+  .form-check .form-check-input{
+    float: right;
+    margin-left: 0;
+  }
+}

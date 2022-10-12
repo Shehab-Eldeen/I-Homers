@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+@import './assets/style/variables.scss';
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+/* Importing Bootstrap SCSS file. */
+// @import '~bootstrap/scss/bootstrap';
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+@import './assets/style/index.scss';
+
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.btn-primary {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+}
+.btn-primary:hover {
+  box-shadow: 0 8px 25px -8px var(--primary) !important;
+}
+.btn-primary:focus ,
+.btn-primary:active {
+  background-color: var(--primary-1) !important;
+}

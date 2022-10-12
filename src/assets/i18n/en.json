@@ -1,0 +1,18 @@
+{
+  "auth": {
+    "welcome": "Welcome to I-Homers",
+    "secondWelcome": "Please sign-in to your account",
+    "forgetPassword": "Forget Password?",
+    "rememberMe": "Remember Me",
+    "signIn": "Sign in",
+    "enterEmail": "Enter your email",
+    "enterPassword": "Enter password",
+    "forgetBody": "Enter your email and we'll send you instructions to reset your password",
+    "forgetButton": "Send reset link",
+    "backToLogin": "Back to login"
+  },
+  "common": {
+    "email": "Email",
+    "password": "Password"
+  }
+}

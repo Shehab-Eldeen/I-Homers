@@ -1,0 +1,57 @@
+<div class="container-fluid">
+  <div class="row auth">
+    <div class="d-none d-lg-flex col-lg-8 p-5 auth-img">
+      <div class="w-100 d-lg-flex align-items-center justify-content-center px-5">
+        <img src="/assets/images/login.svg" class="img-fluid"/>
+      </div>
+    </div>
+    <div class="d-flex align-items-center justify-content-center px-2 p-5 col-lg-4 auth-body">
+      <div class="px-xl-2 mx-auto col-sm-8 col-md-6 col-lg-12">
+        <h2 class="card-title mb-1">{{ "auth.welcome" | translate }}</h2>
+        <p class="card-text mb-2">{{ "auth.secondWelcome" | translate }}</p>
+        <form [formGroup]="loginForm">
+          <div class="form-group my-3">
+            <label for="login-email" class="label mb-1">{{"common.email" | translate}}</label>
+            <app-input 
+              [control]="loginForm.get('email')" 
+              [id]="'login-email'" 
+              [class]="'form-control'"
+              [type]="'email'"
+              placeholder="{{'auth.enterEmail' | translate}}"
+              ></app-input>
+          </div>
+          <div class="form-group my-2">
+            <div class="d-flex justify-content-between mb-1">
+              <label class="label" for="login-password">{{ "common.password" | translate}}</label>
+              <a><small [routerLink]="['/forget-password']">{{"auth.forgetPassword" | translate}}</small></a>
+            </div>
+            <div class="form-group">
+              <app-input
+                [control]="loginForm.get('password')"
+                [id]="'login-password'"
+                [type]="'password'"
+                [class]="'form-control'"
+                placeholder="{{'auth.enterPassword' | translate}}"
+                ></app-input>
+            </div>
+          </div>
+          <div class="form-check my-3">
+            <input 
+              class="form-check-input" 
+              type="checkbox" 
+              formControlName="rememberMe" 
+              id="rememberMe" />
+            <label class="form-check-label" for="rememberMe">
+              {{ "auth.rememberMe" | translate }}
+            </label>
+          </div>
+          <div class="d-grid my-3">
+            <button [disabled]="loginForm.invalid" class="btn btn-primary">
+              {{ "auth.signIn" | translate}}
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
